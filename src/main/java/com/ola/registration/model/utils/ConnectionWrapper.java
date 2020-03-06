@@ -1,4 +1,4 @@
-package com.ola.registration.model.dao.utils;
+package com.ola.registration.model.utils;
 
 import java.sql.Connection;
 import java.time.LocalDateTime;
