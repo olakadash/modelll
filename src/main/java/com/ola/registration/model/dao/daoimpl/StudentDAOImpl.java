@@ -5,7 +5,7 @@ import com.ola.registration.model.entity.NewStudentBuilder;
 import com.ola.registration.model.utils.DatabaseConnection;
 import com.ola.registration.model.entity.Student;
 import java.sql.ResultSet;
-import java.sql.SQLException;
+
 
 public class StudentDAOImpl implements StudentDAO  {
 

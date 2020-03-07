@@ -9,14 +9,9 @@ public class CourseBuilder {
          course=new Course();
     }
 
-    public CourseBuilder setIdBuilder(String id){
-
-        course.setId(id);
-
-        return this;
-    }
 
     public CourseBuilder setCapacityBuilder(String capacity) {
+
         course.setCapacity(capacity);
 
         return this;
@@ -33,22 +28,22 @@ public class CourseBuilder {
         return this;
     }
 
-    public CourseBuilder setHoursBuilder (String hours) {
+    public CourseBuilder setHoursBuilder(String hours) {
         course.setHours(hours);
         return this;
     }
 
 
-    public CourseBuilder setId(String id) {
-        course.setId(id);
+    public CourseBuilder setCourseIdBuilder(String id) {
+        course.setCourseId(id);
         return this;
     }
 
-    public CourseBuilder setCourseCode(String courseCode) {
+    public CourseBuilder setCourseCodeBuilder(String courseCode) {
         course.setCourseCode(courseCode);
         return this;
     }
-    public CourseBuilder setCourseName(String name) {
+    public CourseBuilder setCourseNameBuilder(String name) {
         course.setCourseName(name);
         return this;
     }

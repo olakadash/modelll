@@ -151,7 +151,7 @@ import java.sql.ResultSet;
 
               preparedStatement = getConnection().getConnection().prepareStatement(query);
 
-                 preparedStatement.setString(1,course.getId());
+                 preparedStatement.setString(1,course.getCourseId());
                  preparedStatement.setString(2,course.getCourseName());
                  preparedStatement.setString(3,course.getInstructor());
                  preparedStatement.setString(4,course.getCourseCode());
@@ -182,7 +182,7 @@ import java.sql.ResultSet;
             preparedStatement.setString(5,course.getStartingDate());
             preparedStatement.setString(6,course.getDuration());
             preparedStatement.setString(7,course.getHours());
-            preparedStatement.setString(8,course.getId());
+            preparedStatement.setString(8,course.getCourseId());
 
             preparedStatement.executeUpdate();
 

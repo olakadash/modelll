@@ -2,7 +2,7 @@ package com.ola.registration.model.entity;
 
 public class Course {
 
-    private  String id;
+    private  String courseId;
     private  String courseName;
     private  String instructor;
     private  String courseCode;
@@ -29,8 +29,8 @@ public class Course {
         this.hours = hours;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public void setCourseId(String id) {
+        this.courseId = courseId;
     }
 
     public void setCourseCode(String courseCode) {
@@ -45,8 +45,8 @@ public class Course {
         this.instructor = instructor;
     }
 
-    public String getId() {
-        return id;
+    public String getCourseId() {
+        return courseId;
     }
 
     public String getHours() {
@@ -80,7 +80,7 @@ public class Course {
     @Override
     public String toString() {
         return "Course{" +
-                "id='" + id + '\'' +
+                "id='" + courseId + '\'' +
                 ", courseName='" + courseName + '\'' +
                 ", instructor='" + instructor + '\'' +
                 ", courseCode='" + courseCode + '\'' +
