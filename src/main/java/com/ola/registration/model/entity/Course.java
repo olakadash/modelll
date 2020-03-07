@@ -6,7 +6,7 @@ public class Course {
     private  String courseName;
     private  String instructor;
     private  String courseCode;
-    private  String Capacity;
+    private  String capacity;
     private  String startingDate;
     private  String duration ;
     private  String hours;
@@ -14,7 +14,7 @@ public class Course {
 
 
     public void setCapacity(String capacity) {
-        Capacity = capacity;
+        this.capacity = capacity;
     }
 
     public void setStartingDate(String startingDate) {
@@ -62,7 +62,7 @@ public class Course {
     }
 
     public String getCapacity() {
-        return Capacity;
+        return capacity;
     }
 
     public String getStartingDate() {
@@ -77,4 +77,17 @@ public class Course {
         return duration;
     }
 
+    @Override
+    public String toString() {
+        return "Course{" +
+                "id='" + id + '\'' +
+                ", courseName='" + courseName + '\'' +
+                ", instructor='" + instructor + '\'' +
+                ", courseCode='" + courseCode + '\'' +
+                ", capacity='" + capacity + '\'' +
+                ", startingDate='" + startingDate + '\'' +
+                ", duration='" + duration + '\'' +
+                ", hours='" + hours + '\'' +
+                '}';
+    }
 }

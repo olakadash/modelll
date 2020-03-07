@@ -4,13 +4,13 @@ import com.ola.registration.model.dao.CourseDAO;
 import com.ola.registration.model.utils.DatabaseConnection;
 import com.ola.registration.model.entity.Course;
 import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.util.List;
 
 public class CourseDAOImpl implements CourseDAO  {
 
     private DatabaseConnection databaseConnection;
 
-    public CourseDAOImpl(String url , String username, String password) throws SQLException {
+    public CourseDAOImpl(String url , String username, String password)  {
         databaseConnection =new DatabaseConnection(url, username, password);
 
     }
@@ -18,92 +18,95 @@ public class CourseDAOImpl implements CourseDAO  {
 
 
     @Override
-    public void findCourseById(String id)  {
+    public String findCourseById(String id)  {
+
+        String result=" ";
+
         try {
-
-
-        String query = " select * from courses.course "
-                + "where id=?";
+        String query = " select * from courses.course where id=?";
 
         ResultSet resultSet =  databaseConnection.select(query,id);
 
         while (resultSet.next()){
 
-            System.out.println("CourseIdFound:- "+resultSet.getString(1)+
-                    "\n info :"  +
-                    "\ncourseName:- "+resultSet.getString(2)+
-                    "\ninstructorName:- "+ resultSet.getString(3)+"\n");
+            result=resultSet.getString(1);
 
         }
 
-        }catch (SQLException e){
+        }catch (Exception e){
             System.out.println(e);
         }
+
+        return result;
     }
 
     @Override
-    public void findCourseByName(String courseName)  {
+    public String findCourseByName(String courseName)  {
+        String result=" ";
+
         try {
-        String query = " select * from courses.course "
-                + "where courseName=?";
+        String query = " select * from courses.course where courseName=?";
 
         ResultSet resultSet =  databaseConnection.select(query,courseName);
 
         while (resultSet.next()) {
-            System.out.println("\n courseFound "+ resultSet.getString(2) +"\n Other Info:- "+
-                    "\n ID:- "+resultSet.getString(1)  +
-                    "\n instructorName:- "+resultSet.getString(3)+"\n");
+            result= resultSet.getString(2);
         }
-        }catch (SQLException e){
-            System.out.println(e);
-        }
+        }catch (Exception e){
+            System.out.println(e); }
+
+        return result;
     }
 
     @Override
-    public void findCourseByInstructor(String instructor)  {
+    public String findCourseByInstructor(String instructor)  {
+
+        String result=" ";
         try {
-        String query = " select * from courses.course "
-                + "where instructor=?";
+        String query = " select * from courses.course where instructor=?";
 
         ResultSet resultSet =  databaseConnection.select(query,instructor);
 
         while (resultSet.next()) {
-            System.out.println("\n instructorFound "+ resultSet.getString(3) +"\n Other Info:- "+
-                    "\n ID:- "+resultSet.getString(1)  +
-                    "\n courseName:- "+resultSet.getString(2)+"\n");
+             result= resultSet.getString(3) ;
+
         }
-    }catch (SQLException e){
-        System.out.println(e);
-    }
+    }catch (Exception e){
+        System.out.println(e); }
+
+        return result;
     }
 
     @Override
     public void save(Course course) {
 
-        String query = " insert into courses.course " +" values(?,?,?)";
+        String query = " insert into courses.course values(?,?,?,?,?,?,?,?)";
         databaseConnection.insertCourse(query,course);
 
     }
 
     @Override
-    public void list() {
+    public List<Course> list() {
 
+        return null;
     }
 
     @Override
     public void update(Course course)  {
 
-        String query = " update  courses.course " +" set courseName=? ,instructor=? where id=? ;";
+        String query = " update  courses.course set courseName=? ,instructor=?, courseCode=?, capacity=?, startingDate=? ,duration =?, hours=? where id=? ;";
 
         databaseConnection.updateCourse(query,course);
 
     }
 
     @Override
-    public void deleteCourseById(String id) {
+    public boolean deleteCourseById(String id) {
+
         String query = " delete from courses.course where id=?";
 
-        databaseConnection.delete(query , id);
+      return  databaseConnection.delete(query , id);
+
 
     }
 }

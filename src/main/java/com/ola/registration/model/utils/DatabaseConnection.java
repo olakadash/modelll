@@ -1,158 +1,196 @@
 
 package com.ola.registration.model.utils;
 
-        import com.ola.registration.model.entity.Course;
-        import com.ola.registration.model.entity.Student;
+import com.ola.registration.model.entity.Course;
+import com.ola.registration.model.entity.Student;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 
-        import java.sql.DriverManager;
-        import java.sql.PreparedStatement;
-        import java.sql.ResultSet;
-        import java.sql.SQLException;
 
-        public class DatabaseConnection {
-        private PreparedStatement preparedStatement ;
+
+ public class DatabaseConnection  {
+
+        private PreparedStatement preparedStatement;
         private ResultSet resultSet;
-
-        private JeaQueue <ConnectionWrapper> connection;
+        private JeaQueue<ConnectionWrapper> connection;
         private ConnectionWrapper connectionWrapper;
         private String url;
         private String userName;
         private String password;
 
-        public DatabaseConnection(String url,String userName,String password){
-        this.connection=new JeaQueue(10);
-        this.url = url;
-        this.userName = userName;
-        this.password = password;
-        }
 
-        public ConnectionWrapper getConnection () throws SQLException {
-        if(this.connection.isempty()){
-        return new ConnectionWrapper(DriverManager.getConnection(url,userName,password));
+   public DatabaseConnection(String url, String userName, String password) {
 
-        }else {
-        connectionWrapper=this.connection.deQueue();
-        if(connectionWrapper.isAlive()){
-        return connectionWrapper;
-        } else{
-        connectionWrapper.getConnection().close();
-        return getConnection();
-        }
-        }
-        }
-
-        public void release() throws SQLException {
-
-        this.connection.enQueue(connectionWrapper);
+           this.connection = new JeaQueue(10);
+           this.url = url;
+           this.userName = userName;
+           this.password = password;
 
         }
 
 
-        public ResultSet select(String query,String idREmail) {
+   public ConnectionWrapper getConnection() {
+
+       try {
+
+          if (this.connection.isempty()) {
+
+             return new ConnectionWrapper(DriverManager.getConnection(url, userName, password));
+
+          } else {
+
+             connectionWrapper = this.connection.deQueue();
+
+             if (connectionWrapper.isAlive()) {
+                     return connectionWrapper; }
+             else {
+                     connectionWrapper.getConnection().close();
+                     return getConnection(); }
+          }
+          } catch (Exception e) {
+              System.out.println(e); }
+
+           return null;
+   }
+
+
+   public void release() {
+
+           this.connection.enQueue(connectionWrapper);
+
+   }
+
+
+    public ResultSet select(String query,String idREmailRName) {
 
         try {
-        preparedStatement = getConnection().getConnection().prepareStatement(query);
 
-        preparedStatement.setString(1,idREmail);
-        resultSet=preparedStatement.executeQuery();
+          preparedStatement = getConnection().getConnection().prepareStatement(query);
+
+           preparedStatement.setString(1,idREmailRName);
+           resultSet=preparedStatement.executeQuery();
 
         // release();
 
-        } catch (Exception e) {
-        e.getMessage();
-        }
+            } catch (Exception e) {
+                  e.getMessage(); }
 
         return resultSet;
-        }
+   }
 
 
-        public void insertStudent(String query, Student student){
-        try {
-        preparedStatement = getConnection().getConnection().prepareStatement(query);
+   public void insertStudent(String query, Student student){
 
-        preparedStatement.setString(1,student.getId());
-        preparedStatement.setString(2,student.getFirstName());
-        preparedStatement.setString(3,student.getLastName());
-        preparedStatement.setString(4,student.getEmail());
-        preparedStatement.setString(5,student.getPassword());
-        preparedStatement.setString(6,student.getJoinYear());
+           try {
 
-        preparedStatement.executeUpdate();
+             preparedStatement = getConnection().getConnection().prepareStatement(query);
+
+                 preparedStatement.setString(1,student.getId());
+                 preparedStatement.setString(2,student.getFirstName());
+                 preparedStatement.setString(3,student.getLastName());
+                 preparedStatement.setString(4,student.getEmail());
+                 preparedStatement.setString(5,student.getPassword());
+                 preparedStatement.setString(6,student.getJoinYear());
+
+             preparedStatement.executeUpdate();
         //release();
 
-        } catch (Exception e) {
-        e.getMessage(); }
-        }
+           } catch (Exception e) {
+                e.getMessage(); }
+   }
 
 
-        public void updateStudent(String query, Student student){
-        try {
-        preparedStatement = getConnection().getConnection().prepareStatement(query);
+    public void updateStudent(String query, Student student){
 
-        preparedStatement.setString(1,student.getFirstName());
-        preparedStatement.setString(2,student.getLastName());
-        preparedStatement.setString(3,student.getEmail());
-        preparedStatement.setString(4,student.getPassword());
-        preparedStatement.setString(5,student.getJoinYear());
-        preparedStatement.setString(6,student.getId());
+           try {
 
-        preparedStatement.executeUpdate();
+             preparedStatement = getConnection().getConnection().prepareStatement(query);
 
+                preparedStatement.setString(1,student.getFirstName());
+                preparedStatement.setString(2,student.getLastName());
+                preparedStatement.setString(3,student.getEmail());
+                preparedStatement.setString(4,student.getPassword());
+                preparedStatement.setString(5,student.getJoinYear());
+                preparedStatement.setString(6,student.getId());
 
-        } catch (Exception e) {
-        e.getMessage();}
-        }
+              preparedStatement.executeUpdate();
 
 
-        public void delete(String query, String id){
+           } catch (Exception e) {
+                 e.getMessage();}
 
-        String resultDelete="cant delete ";
+   }
 
-        try {
-        preparedStatement= getConnection().getConnection().prepareStatement(query);
 
-        preparedStatement.setString(1, id);
-        preparedStatement.executeUpdate();
-        resultDelete=" ID ="+id+" Successfully deleted ";
+   public boolean delete(String query, String id){
+
+        boolean resultDelete=false;
+
+           try {
+
+                preparedStatement= getConnection().getConnection().prepareStatement(query);
+
+                   preparedStatement.setString(1, id);
+                   preparedStatement.executeUpdate();
+
+        resultDelete=true;
 
         //release();
 
-        } catch (Exception e) {
-        e.getMessage();}
+           } catch (Exception e) {
+                   e.getMessage();}
 
-        System.out.println(resultDelete);
-        }
+        return resultDelete;
+   }
 
-        public void insertCourse(String query, Course course){
+
+   public void insertCourse(String query, Course course){
+
+           try {
+
+              preparedStatement = getConnection().getConnection().prepareStatement(query);
+
+                 preparedStatement.setString(1,course.getId());
+                 preparedStatement.setString(2,course.getCourseName());
+                 preparedStatement.setString(3,course.getInstructor());
+                 preparedStatement.setString(4,course.getCourseCode());
+                 preparedStatement.setString(5,course.getCapacity());
+                 preparedStatement.setString(6,course.getStartingDate());
+                 preparedStatement.setString(7,course.getDuration());
+                 preparedStatement.setString(8,course.getHours());
+
+              preparedStatement.executeUpdate();
+              //release();
+
+           } catch (Exception e) {
+                e.getMessage(); }
+   }
+
+
+   public void updateCourse(String query, Course course){
+
         try {
-        preparedStatement = getConnection().getConnection().prepareStatement(query);
 
-        preparedStatement.setString(1,course.getId());
-        preparedStatement.setString(2,course.getCourseName());
-        preparedStatement.setString(3,course.getInstructor());
-
-        preparedStatement.executeUpdate();
-        //release();
-
-        } catch (Exception e) {
-        e.getMessage(); }
-        }
-
-        public void updateCourse(String query, Course course){
-        try {
-        preparedStatement = getConnection().getConnection().prepareStatement(query);
-
-        preparedStatement.setString(1,course.getCourseName());
-        preparedStatement.setString(2,course.getInstructor());
-        preparedStatement.setString(3,course.getId());
+            preparedStatement = getConnection().getConnection().prepareStatement(query);
 
 
-        preparedStatement.executeUpdate();
+            preparedStatement.setString(1,course.getCourseName());
+            preparedStatement.setString(2,course.getInstructor());
+            preparedStatement.setString(3,course.getCourseCode());
+            preparedStatement.setString(4,course.getCapacity());
+            preparedStatement.setString(5,course.getStartingDate());
+            preparedStatement.setString(6,course.getDuration());
+            preparedStatement.setString(7,course.getHours());
+            preparedStatement.setString(8,course.getId());
+
+            preparedStatement.executeUpdate();
 
 
         } catch (Exception e) {
-        e.getMessage();}
-        }
+             e.getMessage();}
+   }
 
-        }
+
+}
 

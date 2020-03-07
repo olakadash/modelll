@@ -16,14 +16,14 @@ public class StudentBuilder {
         }
 
 
-    public StudentBuilder setFirstNameBuilder(String firstname){
-        student.setFirstName(firstname);
+    public StudentBuilder setFirstNameBuilder(String firstName){
+        student.setFirstName(firstName);
         return this;
     }
 
 
-    public StudentBuilder setLastNameBuilder(String lastname){
-        student.setLastName(lastname);
+    public StudentBuilder setLastNameBuilder(String lastName){
+        student.setLastName(lastName);
         return this;
     }
 
@@ -39,7 +39,7 @@ public class StudentBuilder {
         return this;
     }
 
-    public StudentBuilder setJoinBuilder(String joinYear){
+    public StudentBuilder setJoinYearBuilder(String joinYear){
         student.setJoinYear(joinYear);
         return this;
     }

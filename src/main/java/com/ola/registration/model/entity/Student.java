@@ -6,7 +6,7 @@ public class Student {
     private String firstName;
     private String lastName;
     private String email;
-    private String Password;
+    private String password;
     private String joinYear;
 
 
@@ -43,11 +43,11 @@ public class Student {
     }
 
     public String getPassword() {
-        return Password;
+        return password;
     }
 
     public void setPassword(String password) {
-        Password = password;
+        this.password = password;
     }
 
     public String getJoinYear() {
@@ -58,6 +58,15 @@ public class Student {
         this.joinYear = joinYear;
     }
 
-
-
+    @Override
+    public String toString() {
+        return "Student{" +
+                "id='" + id + '\'' +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", email='" + email + '\'' +
+                ", password='" + password + '\'' +
+                ", joinYear='" + joinYear + '\'' +
+                '}';
+    }
 }
