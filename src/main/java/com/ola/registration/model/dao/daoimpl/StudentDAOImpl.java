@@ -1,80 +1,87 @@
 package com.ola.registration.model.dao.daoimpl;
 
 import com.ola.registration.model.dao.StudentDAO;
-import com.ola.registration.model.dao.utils.DatabaseConnection;
+import com.ola.registration.model.entity.NewStudentBuilder;
+import com.ola.registration.model.utils.DatabaseConnection;
 import com.ola.registration.model.entity.Student;
 import java.sql.ResultSet;
-import java.sql.SQLException;
+
 
 public class StudentDAOImpl implements StudentDAO  {
 
     private DatabaseConnection databaseConnection;
 
-    public StudentDAOImpl(String url , String username, String password) throws SQLException {
+    public StudentDAOImpl(String url , String username, String password)  {
         databaseConnection =new DatabaseConnection(url, username, password);
 
     }
 
-    public void findById(String id) throws SQLException {
+    public String  findById(String id)  {
+        String resultId=" ";
+         try{
 
-        String query = " select * from student1.student "
-                + "where id=?";
+        String query = " select * from student1.student where id=?";
 
         ResultSet resultSet =  databaseConnection.select(query,id);
 
         while (resultSet.next()){
 
-                System.out.println("idFound:- "+resultSet.getString(1)+
-                        "\n info :"  +
-                        "\nfirstName:- "+resultSet.getString(2)+
-                        "\nlastName:- "+ resultSet.getString(3)
-                        +"\nEmail:- "+ resultSet.getString(4)
-                        +"\njoinYear:- " + resultSet.getString(6)+"\n");
+            resultId=resultSet.getString(1);
 
         }
+    }catch (Exception e){
+        System.out.println(e);
+    }
+         return resultId;
     }
 
-    public void findByEmail(String email) throws SQLException {
+    public String findByEmail(String email)  {
+        String result= " ";
 
-        String query = " select * from student1.student "
-                + "where email=?";
+        try {
+            String query = " select * from student1.student where email=?";
 
-        ResultSet resultSet =  databaseConnection.select(query,email);
+            ResultSet resultSet = databaseConnection.select(query, email);
 
             while (resultSet.next()) {
-                System.out.println("\n emailFound "+ resultSet.getString(4) +"\n Other Info:- "+
-                        "\n ID:- "+resultSet.getString(1)  +
-                        "\n firstName:- "+resultSet.getString(2)+
-                        "\n lastName:- "+ resultSet.getString(3)
-                        +"\n joinYear:- " + resultSet.getString(6)+"\n");
+
+                result =  resultSet.getString(4) ;
+
             }
 
+        }catch (Exception e){
+            System.out.println(e);
+        }
 
+        return result;
     }
 
     public void save(Student student) {
 
-        String query = " insert into student1.student " +" values(?,?,?,?,?,?)";
-        databaseConnection.insert(query,student);
+        String query = " insert into student1.student  values(?,?,?,?,?,?)";
+        databaseConnection.insertStudent(query,student);
 
     }
 
-    public void update(Student student) throws SQLException {
-        String query = " update  student1.student " +" set firstName=? ,lastName=? , email=? ,password=?,joinYear=? " +
-                                      " where id=? ;";
+    public void update(Student student)  {
 
-        databaseConnection.update(query,student);
+        String query = " update  student1.student set firstName=? ,lastName=? , email=? ,password=?,joinYear=? where id=? ;";
+
+        databaseConnection.updateStudent(query,student);
+
+    }
+
+
+    public boolean deleteStudentById(String ID) {
+
+        String query = " delete from student1.student where id=? ";
+
+     boolean result= databaseConnection.delete(query , ID);
+
+     return result;
 
     }
 
-
-    public void DeleteById(String ID) {
-
-        String query = " delete from student1.student where id=?";
-
-         databaseConnection.deleteStudent(query , ID);
-
-    }
 
 
 }
