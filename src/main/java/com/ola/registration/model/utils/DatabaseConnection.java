@@ -2,6 +2,7 @@
 package com.ola.registration.model.utils;
 
 import com.ola.registration.model.entity.Course;
+import com.ola.registration.model.entity.Schedule;
 import com.ola.registration.model.entity.Student;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -192,5 +193,20 @@ import java.sql.ResultSet;
    }
 
 
-}
+     public void insertSchedule(String query, Schedule schedule) {
+
+         try {
+             preparedStatement = getConnection().getConnection().prepareStatement(query);
+
+               preparedStatement.setString(1,schedule.getStudentId());
+               preparedStatement.setString(2,schedule.getCourseId());
+               preparedStatement.setString(3,schedule.getScheduleId());
+
+             preparedStatement.executeUpdate();
+
+         }catch (Exception e){
+            e.getStackTrace();
+         }
+     }
+ }
 

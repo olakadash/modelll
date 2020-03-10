@@ -2,8 +2,10 @@
         package com.ola.registration.model;
 
         import com.ola.registration.model.dao.CourseDAO;
+        import com.ola.registration.model.dao.ScheduleDAO;
         import com.ola.registration.model.dao.StudentDAO;
         import com.ola.registration.model.dao.daoimpl.CourseDAOImpl;
+        import com.ola.registration.model.dao.daoimpl.ScheduleDAOImpl;
         import com.ola.registration.model.dao.daoimpl.StudentDAOImpl;
         import com.ola.registration.model.entity.*;
 
@@ -34,8 +36,8 @@
                        , "root", "root@JEA");
 //
 
-                 courseDAOImpl.save(course("lk","5","5","5","4",
-                        "5","4","42"));
+                // courseDAOImpl.save(course("lk","5","5","5","4",
+                      //  "5","4","42"));
               //  System.out.println(courseDAOImpl.findCourseById("as").toString());
 //                //  courseDAOImpl.save(new Course("9","java","LA"));
 //                courseDAOImpl.deleteCourseById("6");
@@ -44,6 +46,10 @@
 //                courseDAOImpl.findCourseByInstructor("LA");
 //                courseDAOImpl.update(new CourseBuilder().setCourseCode("").build());
 
+                ScheduleDAO scheduleDAO=new ScheduleDAOImpl("jdbc:mysql://localhost:3306/student1?useSSL=false"
+                        , "root", "root@JEA");
+
+                   scheduleDAO.deleteSchedule("4");
 
             }catch (Exception e){
                 e.getStackTrace(); }
