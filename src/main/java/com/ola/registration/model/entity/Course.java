@@ -13,7 +13,7 @@ public class Course {
 
 
 
-    public void setCapacity(String capacity) {
+     void setCapacity(String capacity) {
         this.capacity = capacity;
     }
 
@@ -29,7 +29,7 @@ public class Course {
         this.hours = hours;
     }
 
-    public void setCourseId(String id) {
+    public void setCourseId(String courseId) {
         this.courseId = courseId;
     }
 

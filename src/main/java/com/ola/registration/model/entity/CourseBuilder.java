@@ -10,6 +10,28 @@ public class CourseBuilder {
     }
 
 
+    public CourseBuilder setCourseIdBuilder(String id) {
+        course.setCourseId(id);
+        return this;
+    }
+
+
+    public CourseBuilder setCourseNameBuilder(String name) {
+        course.setCourseName(name);
+        return this;
+    }
+
+
+    public CourseBuilder setInstructorBuilder(String instructor) {
+        course.setInstructor(instructor);
+        return this;
+    }
+
+    public CourseBuilder setCourseCodeBuilder(String courseCode) {
+        course.setCourseCode(courseCode);
+        return this;
+    }
+
     public CourseBuilder setCapacityBuilder(String capacity) {
 
         course.setCapacity(capacity);
@@ -34,24 +56,6 @@ public class CourseBuilder {
     }
 
 
-    public CourseBuilder setCourseIdBuilder(String id) {
-        course.setCourseId(id);
-        return this;
-    }
-
-    public CourseBuilder setCourseCodeBuilder(String courseCode) {
-        course.setCourseCode(courseCode);
-        return this;
-    }
-    public CourseBuilder setCourseNameBuilder(String name) {
-        course.setCourseName(name);
-        return this;
-    }
-
-    public CourseBuilder setInstructorBuilder(String instructor) {
-        course.setInstructor(instructor);
-        return this;
-    }
 
     public Course build(){
 

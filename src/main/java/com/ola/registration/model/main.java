@@ -20,10 +20,10 @@
 
 //                System.out.println(studentDAOImpl.findByEmail("ola@gmail.com"));
 //
-//                System.out.println(studentDAOImpl.findById("9"));
+              // System.out.println(studentDAOImpl.findById("9").toString());
 
-                studentDAOImpl.save( student("pl","sd","sd","ds","ds","s"));
-                System.out.println(studentDAOImpl.deleteStudentById("5"));
+               // studentDAOImpl.save( student("pl","sd","sd","ds","ds","s"));
+               // System.out.println(studentDAOImpl.deleteStudentById("5"));
 
                 // studentDAOImpl.update(new Student("9","kadash3","555","sam2ar@gmail.com","samar",
                 //  "1/2/225"));
@@ -33,10 +33,10 @@
                 CourseDAO courseDAOImpl = new CourseDAOImpl("jdbc:mysql://localhost:3306/student1?useSSL=false"
                        , "root", "root@JEA");
 //
-//                courseDAOImpl.findCourseById("6");
-                 courseDAOImpl.save(course("as","5","5","5","4",
-                         "5","4","42"));
 
+                 courseDAOImpl.save(course("lk","5","5","5","4",
+                        "5","4","42"));
+              //  System.out.println(courseDAOImpl.findCourseById("as").toString());
 //                //  courseDAOImpl.save(new Course("9","java","LA"));
 //                courseDAOImpl.deleteCourseById("6");
 //                courseDAOImpl.findCourseByName("java");
@@ -65,13 +65,14 @@
      public static Student student(String id , String firstName, String lastName, String email, String password,
                              String joinYear){
 
-         return   NewStudentBuilder.creatStudent(id,firstName,lastName,email,password,joinYear);
+         return   BuildStudentBuilderConstructor.buildStudentFromUserInput(id,firstName,lastName,email,password,joinYear);
      }
 
      public static Course course(String id , String courseName, String instructor, String courseCode,
                                  String capacity,String startingDate,String duration,String hours){
 
-         return   NewCourseBuilder.creatCourse(id,courseName,instructor,courseCode,capacity,startingDate,duration,hours);
+         return   BuildCourseBuilderConstructor.buildCourseFromUserInput(id,courseName,instructor,
+                 courseCode,capacity,startingDate,duration,hours);
      }
 
   }

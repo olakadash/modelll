@@ -1,7 +1,7 @@
 package com.ola.registration.model.dao.daoimpl;
 
 import com.ola.registration.model.dao.StudentDAO;
-import com.ola.registration.model.entity.NewStudentBuilder;
+import com.ola.registration.model.entity.BuildStudentBuilderConstructor;
 import com.ola.registration.model.utils.DatabaseConnection;
 import com.ola.registration.model.entity.Student;
 import java.sql.ResultSet;
@@ -16,23 +16,26 @@ public class StudentDAOImpl implements StudentDAO  {
 
     }
 
-    public String  findById(String id)  {
-        String resultId=" ";
+    public Student  findById(String id)  {
+
+        Student student=null;
          try{
 
         String query = " select * from student1.student where id=?";
 
         ResultSet resultSet =  databaseConnection.select(query,id);
 
-        while (resultSet.next()){
+        if (resultSet.next()){
 
-            resultId=resultSet.getString(1);
+          student= BuildStudentBuilderConstructor.buildStudentFromResultSET(resultSet);
+
 
         }
-    }catch (Exception e){
-        System.out.println(e);
-    }
-         return resultId;
+         }catch (Exception e){
+             System.out.println(e);
+           }
+
+         return student;
     }
 
     public String findByEmail(String email)  {
@@ -65,6 +68,7 @@ public class StudentDAOImpl implements StudentDAO  {
 
     public void update(Student student)  {
 
+        //ToDO handel update query
         String query = " update  student1.student set firstName=? ,lastName=? , email=? ,password=?,joinYear=? where id=? ;";
 
         databaseConnection.updateStudent(query,student);
