@@ -58,7 +58,7 @@
                   // scheduleDAO.deleteSchedule("4");
                // scheduleDAO.saveNewSchedule(new Schedule("3","1","2"));
 
-                System.out.println(scheduleDAO.isRegister("1","4"));
+                System.out.println(scheduleDAO.isRegister("1","1"));
                // scheduleDAO.findByCourseId("2");
 
 
