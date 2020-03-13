@@ -1,18 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c983f888-756e-4dc3-af64-041c6bd42e2a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ola/registration/model/dao/daoimpl/ScheduleDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ola/registration/model/dao/daoimpl/ScheduleDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ola/registration/model/dao/daoimpl/StudentDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ola/registration/model/dao/daoimpl/StudentDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ola/registration/model/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ola/registration/model/main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ola/registration/model/utils/DatabaseConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ola/registration/model/utils/DatabaseConnection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ola/registration/model/dao/daoimpl/ScheduleDAOImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ola/registration/model/dao/daoimpl/ScheduleDAOImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ola/registration/model/main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ola/registration/model/main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ola/registration/model/utils/DatabaseConnection.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ola/registration/model/utils/DatabaseConnection.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/model-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/model-1.0-SNAPSHOT.jar" afterDir="false" />
-    </list>
+    <list default="true" id="c983f888-756e-4dc3-af64-041c6bd42e2a" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -315,12 +304,12 @@
       <workItem from="1583865769022" duration="416000" />
       <workItem from="1583868906015" duration="18694000" />
       <workItem from="1583889466503" duration="3508000" />
-      <workItem from="1584132260992" duration="5648000" />
+      <workItem from="1584132260992" duration="6104000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="112438000" />
+    <option name="totallyTimeSpent" value="112894000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -345,7 +334,7 @@
       <window_info id="Image Layers" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49848714" visible="true" weight="0.2315951" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49848714" visible="true" weight="0.2101227" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.41871166" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
