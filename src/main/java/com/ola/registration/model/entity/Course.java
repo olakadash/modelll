@@ -1,5 +1,6 @@
 package com.ola.registration.model.entity;
 
+
 import java.util.Date;
 
 public class Course {
@@ -8,14 +9,13 @@ public class Course {
     private  String courseName;
     private  String instructor;
     private  String courseCode;
-    private  String capacity;
-    private  Date startingDate;
+    private  Double capacity;
+    private  Date   startingDate;
     private  String duration ;
     private  String hours;
 
 
-
-    public void setCapacity(String capacity) {
+    public void setCapacity(Double capacity) {
         this.capacity = capacity;
     }
 
@@ -63,7 +63,7 @@ public class Course {
         return instructor;
     }
 
-    public String getCapacity() {
+    public Double getCapacity() {
         return capacity;
     }
 

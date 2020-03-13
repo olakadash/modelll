@@ -9,6 +9,10 @@
         import com.ola.registration.model.dao.daoimpl.StudentDAOImpl;
         import com.ola.registration.model.entity.*;
 
+        import java.util.ArrayList;
+        import java.util.Date;
+        import java.util.List;
+
 
         public class main {
 
@@ -38,9 +42,11 @@
 
                 // courseDAOImpl.save(course("lk","5","5","5","4",
                       //  "5","4","42"));
-              //  System.out.println(courseDAOImpl.findCourseById("as").toString());
+               // System.out.println(courseDAOImpl.findCourseById("2").toString());
+                //System.out.println(new Date());
 //                //  courseDAOImpl.save(new Course("9","java","LA"));
-//                courseDAOImpl.deleteCourseById("6");
+
+                //System.out.println(courseDAOImpl.deleteCourseById("2"));
 //                courseDAOImpl.findCourseByName("java");
 //                courseDAOImpl.findCourseByInstructor("AA");
 //                courseDAOImpl.findCourseByInstructor("LA");
@@ -49,7 +55,12 @@
                 ScheduleDAO scheduleDAO=new ScheduleDAOImpl("jdbc:mysql://localhost:3306/student1?useSSL=false"
                         , "root", "root@JEA");
 
-                   scheduleDAO.deleteSchedule("4");
+                  // scheduleDAO.deleteSchedule("4");
+               // scheduleDAO.saveNewSchedule(new Schedule("3","1","2"));
+
+                System.out.println(scheduleDAO.isRegister("1","4"));
+               // scheduleDAO.findByCourseId("2");
+
 
             }catch (Exception e){
                 e.getStackTrace(); }
@@ -75,10 +86,10 @@
      }
 
      public static Course course(String id , String courseName, String instructor, String courseCode,
-                                 String capacity,String startingDate,String duration,String hours){
+                                 Double capacity, Date startingDate, String duration, String hours){
 
          return   BuildCourseBuilderConstructor.buildCourseFromUserInput(id,courseName,instructor,
-                 courseCode,capacity,startingDate,duration,hours);
+                 courseCode,capacity, (java.sql.Date) startingDate,duration,hours);
      }
 
   }

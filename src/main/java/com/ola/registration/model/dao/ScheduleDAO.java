@@ -14,6 +14,7 @@ public interface ScheduleDAO {
    void            saveNewSchedule(Schedule schedule);
    //ToDo update method
    void            updateSchedule();
-
+   String          scheduleIdCreator();
+   boolean         isRegister(String studentId,String courseId);
 
 }

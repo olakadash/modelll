@@ -1,5 +1,7 @@
 package com.ola.registration.model.entity;
 
+import java.util.Date;
+
 public class CourseBuilder {
 
     Course course;
@@ -32,7 +34,7 @@ public class CourseBuilder {
         return this;
     }
 
-    public CourseBuilder setCapacityBuilder(String capacity) {
+    public CourseBuilder setCapacityBuilder(Double capacity) {
 
         course.setCapacity(capacity);
 
@@ -40,7 +42,7 @@ public class CourseBuilder {
     }
 
 
-    public CourseBuilder setStartingDateBuilder(String startingDate) {
+    public CourseBuilder setStartingDateBuilder(Date startingDate) {
         course.setStartingDate(startingDate);
         return this;
     }

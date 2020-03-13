@@ -24,7 +24,7 @@ public class CourseDAOImpl implements CourseDAO  {
         Course course=null;
 
         try {
-        String query = " select * from student1.course where idCourse=?";
+        String query = " select * from student1.course where courseId=?";
 
         ResultSet resultSet =  databaseConnection.select(query,id);
 

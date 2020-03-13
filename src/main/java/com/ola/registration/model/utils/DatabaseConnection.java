@@ -4,6 +4,7 @@ package com.ola.registration.model.utils;
 import com.ola.registration.model.entity.Course;
 import com.ola.registration.model.entity.Schedule;
 import com.ola.registration.model.entity.Student;
+
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -156,8 +157,8 @@ import java.sql.ResultSet;
                  preparedStatement.setString(2,course.getCourseName());
                  preparedStatement.setString(3,course.getInstructor());
                  preparedStatement.setString(4,course.getCourseCode());
-                 preparedStatement.setString(5,course.getCapacity());
-                 preparedStatement.setString(6,course.getStartingDate());
+                 preparedStatement.setString(5, String.valueOf(course.getCapacity()));
+                 preparedStatement.setString  (6 , String.valueOf(course.getStartingDate()));
                  preparedStatement.setString(7,course.getDuration());
                  preparedStatement.setString(8,course.getHours());
 
@@ -179,8 +180,8 @@ import java.sql.ResultSet;
             preparedStatement.setString(1,course.getCourseName());
             preparedStatement.setString(2,course.getInstructor());
             preparedStatement.setString(3,course.getCourseCode());
-            preparedStatement.setString(4,course.getCapacity());
-            preparedStatement.setString(5,course.getStartingDate());
+            preparedStatement.setString(4, String.valueOf(course.getCapacity()));
+            preparedStatement.setString(5, String.valueOf(course.getStartingDate()));
             preparedStatement.setString(6,course.getDuration());
             preparedStatement.setString(7,course.getHours());
             preparedStatement.setString(8,course.getCourseId());
@@ -198,15 +199,46 @@ import java.sql.ResultSet;
          try {
              preparedStatement = getConnection().getConnection().prepareStatement(query);
 
-               preparedStatement.setString(1,schedule.getStudentId());
-               preparedStatement.setString(2,schedule.getCourseId());
-               preparedStatement.setString(3,schedule.getScheduleId());
+               preparedStatement.setString(1,schedule.getScheduleId());
+               preparedStatement.setString(2,schedule.getStudentId());
+               preparedStatement.setString(3,schedule.getCourseId());
 
              preparedStatement.executeUpdate();
 
          }catch (Exception e){
             e.getStackTrace();
          }
+     }
+
+     public ResultSet selectColumn(String query) {
+
+       try {
+
+           preparedStatement = getConnection().getConnection().prepareStatement(query);
+           resultSet = preparedStatement.executeQuery();
+
+       }catch (Exception e){
+           e.getStackTrace();
+       }
+
+       return resultSet;
+     }
+
+     public ResultSet selectRegistration(String query,String studentId, String courseId) {
+
+         try {
+
+
+             preparedStatement = getConnection().getConnection().prepareStatement(query);
+             preparedStatement.setString(1,studentId);
+             preparedStatement.setString(2,courseId);
+             resultSet=preparedStatement.executeQuery();
+
+         }catch (Exception e){
+             e.getStackTrace();
+         }
+
+         return resultSet;
      }
  }
 

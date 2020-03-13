@@ -2,14 +2,17 @@ package com.ola.registration.model.entity;
 
 public class Schedule {
 
+   private String  scheduleId;
    private String  studentId;
    private String  courseId;
-   private String  scheduleId;
 
-   public Schedule(String studentId, String courseId,String scheduleId ) {
+
+   public Schedule(String scheduleId,String studentId, String courseId ) {
+
+      this.scheduleId=scheduleId;
       this.studentId = studentId;
       this.courseId = courseId;
-      this.scheduleId=scheduleId;
+
    }
 
    public void setStudentId(String studentId) {
@@ -39,9 +42,9 @@ public class Schedule {
    @Override
    public String toString() {
       return "Schedule{" +
-              "studentId='" + studentId + '\'' +
+              "scheduleId='" + scheduleId + '\'' +
+              ", studentId='" + studentId + '\'' +
               ", courseId='" + courseId + '\'' +
-              ", scheduleId='" + scheduleId + '\'' +
               '}';
    }
 }
