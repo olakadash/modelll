@@ -32,12 +32,10 @@ public class ScheduleDAOImpl implements ScheduleDAO {
       resultSet= databaseConnection.select(query2,courseId);
 
      try{
-         int i=0;
+
      while (resultSet.next()) {
 
          schedules.add(BuildStudentBuilderConstructor.buildStudentFromResultSET(resultSet));
-         System.out.println(schedules.get(i).toString());
-         i+=1;
      }
 
      }catch (Exception e){

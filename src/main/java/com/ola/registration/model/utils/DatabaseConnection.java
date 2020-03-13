@@ -24,7 +24,7 @@ import java.sql.ResultSet;
 
    public DatabaseConnection(String url, String userName, String password) {
 
-           this.connection = new JeaQueue(10);
+           this.connection = new JeaQueue(20);
            this.url = url;
            this.userName = userName;
            this.password = password;
