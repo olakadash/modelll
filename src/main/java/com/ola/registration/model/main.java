@@ -2,10 +2,16 @@
         package com.ola.registration.model;
 
         import com.ola.registration.model.dao.CourseDAO;
+        import com.ola.registration.model.dao.ScheduleDAO;
         import com.ola.registration.model.dao.StudentDAO;
         import com.ola.registration.model.dao.daoimpl.CourseDAOImpl;
+        import com.ola.registration.model.dao.daoimpl.ScheduleDAOImpl;
         import com.ola.registration.model.dao.daoimpl.StudentDAOImpl;
         import com.ola.registration.model.entity.*;
+
+        import java.util.ArrayList;
+        import java.util.Date;
+        import java.util.List;
 
 
         public class main {
@@ -20,10 +26,10 @@
 
 //                System.out.println(studentDAOImpl.findByEmail("ola@gmail.com"));
 //
-//                System.out.println(studentDAOImpl.findById("9"));
+              // System.out.println(studentDAOImpl.findById("9").toString());
 
-                studentDAOImpl.save( student("pl","sd","sd","ds","ds","s"));
-                System.out.println(studentDAOImpl.deleteStudentById("5"));
+               // studentDAOImpl.save( student("pl","sd","sd","ds","ds","s"));
+               // System.out.println(studentDAOImpl.deleteStudentById("5"));
 
                 // studentDAOImpl.update(new Student("9","kadash3","555","sam2ar@gmail.com","samar",
                 //  "1/2/225"));
@@ -33,16 +39,27 @@
                 CourseDAO courseDAOImpl = new CourseDAOImpl("jdbc:mysql://localhost:3306/student1?useSSL=false"
                        , "root", "root@JEA");
 //
-//                courseDAOImpl.findCourseById("6");
-                 courseDAOImpl.save(course("as","5","5","5","4",
-                         "5","4","42"));
 
+                // courseDAOImpl.save(course("lk","5","5","5","4",
+                      //  "5","4","42"));
+               // System.out.println(courseDAOImpl.findCourseById("2").toString());
+                //System.out.println(new Date());
 //                //  courseDAOImpl.save(new Course("9","java","LA"));
-//                courseDAOImpl.deleteCourseById("6");
+
+                //System.out.println(courseDAOImpl.deleteCourseById("2"));
 //                courseDAOImpl.findCourseByName("java");
 //                courseDAOImpl.findCourseByInstructor("AA");
 //                courseDAOImpl.findCourseByInstructor("LA");
 //                courseDAOImpl.update(new CourseBuilder().setCourseCode("").build());
+
+                ScheduleDAO scheduleDAO=new ScheduleDAOImpl("jdbc:mysql://localhost:3306/student1?useSSL=false"
+                        , "root", "root@JEA");
+
+                  // scheduleDAO.deleteSchedule("4");
+               // scheduleDAO.saveNewSchedule(new Schedule("3","1","2"));
+
+                System.out.println(scheduleDAO.isRegister("1","4"));
+               // scheduleDAO.findByCourseId("2");
 
 
             }catch (Exception e){
@@ -65,13 +82,14 @@
      public static Student student(String id , String firstName, String lastName, String email, String password,
                              String joinYear){
 
-         return   NewStudentBuilder.creatStudent(id,firstName,lastName,email,password,joinYear);
+         return   BuildStudentBuilderConstructor.buildStudentFromUserInput(id,firstName,lastName,email,password,joinYear);
      }
 
      public static Course course(String id , String courseName, String instructor, String courseCode,
-                                 String capacity,String startingDate,String duration,String hours){
+                                 Double capacity, Date startingDate, String duration, String hours){
 
-         return   NewCourseBuilder.creatCourse(id,courseName,instructor,courseCode,capacity,startingDate,duration,hours);
+         return   BuildCourseBuilderConstructor.buildCourseFromUserInput(id,courseName,instructor,
+                 courseCode,capacity, (java.sql.Date) startingDate,duration,hours);
      }
 
   }

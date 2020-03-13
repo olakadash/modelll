@@ -1,23 +1,25 @@
 package com.ola.registration.model.entity;
 
+
+import java.util.Date;
+
 public class Course {
 
     private  String courseId;
     private  String courseName;
     private  String instructor;
     private  String courseCode;
-    private  String capacity;
-    private  String startingDate;
+    private  Double capacity;
+    private  Date   startingDate;
     private  String duration ;
     private  String hours;
 
 
-
-    public void setCapacity(String capacity) {
+    public void setCapacity(Double capacity) {
         this.capacity = capacity;
     }
 
-    public void setStartingDate(String startingDate) {
+    public void setStartingDate(Date startingDate) {
         this.startingDate = startingDate;
     }
 
@@ -29,7 +31,7 @@ public class Course {
         this.hours = hours;
     }
 
-    public void setCourseId(String id) {
+    public void setCourseId(String courseId) {
         this.courseId = courseId;
     }
 
@@ -61,11 +63,11 @@ public class Course {
         return instructor;
     }
 
-    public String getCapacity() {
+    public Double getCapacity() {
         return capacity;
     }
 
-    public String getStartingDate() {
+    public Date getStartingDate() {
         return startingDate;
     }
 

@@ -1,6 +1,7 @@
 package com.ola.registration.model.dao.daoimpl;
 
 import com.ola.registration.model.dao.CourseDAO;
+import com.ola.registration.model.entity.BuildCourseBuilderConstructor;
 import com.ola.registration.model.utils.DatabaseConnection;
 import com.ola.registration.model.entity.Course;
 import java.sql.ResultSet;
@@ -18,18 +19,18 @@ public class CourseDAOImpl implements CourseDAO  {
 
 
     @Override
-    public String findCourseById(String id)  {
+    public Course findCourseById(String id)  {
 
-        String result=" ";
+        Course course=null;
 
         try {
-        String query = " select * from courses.course where id=?";
+        String query = " select * from student1.course where courseId=?";
 
         ResultSet resultSet =  databaseConnection.select(query,id);
 
-        while (resultSet.next()){
+        if (resultSet.next()){
 
-            result=resultSet.getString(1);
+            course= BuildCourseBuilderConstructor.buildCourseFromResultSET(resultSet);
 
         }
 
@@ -37,7 +38,7 @@ public class CourseDAOImpl implements CourseDAO  {
             System.out.println(e);
         }
 
-        return result;
+        return course;
     }
 
     @Override
@@ -45,7 +46,7 @@ public class CourseDAOImpl implements CourseDAO  {
         String result=" ";
 
         try {
-        String query = " select * from courses.course where courseName=?";
+        String query = " select * from student1.course where courseName=?";
 
         ResultSet resultSet =  databaseConnection.select(query,courseName);
 
@@ -63,7 +64,7 @@ public class CourseDAOImpl implements CourseDAO  {
 
         String result=" ";
         try {
-        String query = " select * from courses.course where instructor=?";
+        String query = " select * from student1.course where instructor=?";
 
         ResultSet resultSet =  databaseConnection.select(query,instructor);
 
@@ -80,7 +81,7 @@ public class CourseDAOImpl implements CourseDAO  {
     @Override
     public void save(Course course) {
 
-        String query = " insert into courses.course values(?,?,?,?,?,?,?,?)";
+        String query = " insert into student1.course values(?,?,?,?,?,?,?,?)";
         databaseConnection.insertCourse(query,course);
 
     }
@@ -93,8 +94,9 @@ public class CourseDAOImpl implements CourseDAO  {
 
     @Override
     public void update(Course course)  {
+        //ToDO handel update query
 
-        String query = " update  courses.course set courseName=? ,instructor=?, courseCode=?, capacity=?, startingDate=? ,duration =?, hours=? where id=? ;";
+        String query = " update  student1.course set courseName=? ,instructor=?, courseCode=?, capacity=?, startingDate=? ,duration =?, hours=? where idcourse=? ;";
 
         databaseConnection.updateCourse(query,course);
 
@@ -103,7 +105,7 @@ public class CourseDAOImpl implements CourseDAO  {
     @Override
     public boolean deleteCourseById(String id) {
 
-        String query = " delete from courses.course where id=?";
+        String query = " delete from student1.course where idcourse=?";
 
       return  databaseConnection.delete(query , id);
 

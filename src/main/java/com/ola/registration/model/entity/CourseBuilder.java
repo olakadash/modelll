@@ -1,5 +1,7 @@
 package com.ola.registration.model.entity;
 
+import java.util.Date;
+
 public class CourseBuilder {
 
     Course course;
@@ -10,7 +12,29 @@ public class CourseBuilder {
     }
 
 
-    public CourseBuilder setCapacityBuilder(String capacity) {
+    public CourseBuilder setCourseIdBuilder(String id) {
+        course.setCourseId(id);
+        return this;
+    }
+
+
+    public CourseBuilder setCourseNameBuilder(String name) {
+        course.setCourseName(name);
+        return this;
+    }
+
+
+    public CourseBuilder setInstructorBuilder(String instructor) {
+        course.setInstructor(instructor);
+        return this;
+    }
+
+    public CourseBuilder setCourseCodeBuilder(String courseCode) {
+        course.setCourseCode(courseCode);
+        return this;
+    }
+
+    public CourseBuilder setCapacityBuilder(Double capacity) {
 
         course.setCapacity(capacity);
 
@@ -18,7 +42,7 @@ public class CourseBuilder {
     }
 
 
-    public CourseBuilder setStartingDateBuilder(String startingDate) {
+    public CourseBuilder setStartingDateBuilder(Date startingDate) {
         course.setStartingDate(startingDate);
         return this;
     }
@@ -34,24 +58,6 @@ public class CourseBuilder {
     }
 
 
-    public CourseBuilder setCourseIdBuilder(String id) {
-        course.setCourseId(id);
-        return this;
-    }
-
-    public CourseBuilder setCourseCodeBuilder(String courseCode) {
-        course.setCourseCode(courseCode);
-        return this;
-    }
-    public CourseBuilder setCourseNameBuilder(String name) {
-        course.setCourseName(name);
-        return this;
-    }
-
-    public CourseBuilder setInstructorBuilder(String instructor) {
-        course.setInstructor(instructor);
-        return this;
-    }
 
     public Course build(){
 
