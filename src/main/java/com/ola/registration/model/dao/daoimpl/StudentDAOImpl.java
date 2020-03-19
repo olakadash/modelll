@@ -38,8 +38,8 @@ public class StudentDAOImpl implements StudentDAO  {
          return student;
     }
 
-    public String findByEmail(String email)  {
-        String result= " ";
+    public Student findByEmail(String email)  {
+        Student student=null;
 
         try {
             String query = " select * from student1.student where email=?";
@@ -48,7 +48,7 @@ public class StudentDAOImpl implements StudentDAO  {
 
             while (resultSet.next()) {
 
-                result =  resultSet.getString(4) ;
+               student=BuildStudentBuilderConstructor.buildStudentFromResultSET(resultSet);
 
             }
 
@@ -56,7 +56,7 @@ public class StudentDAOImpl implements StudentDAO  {
             System.out.println(e);
         }
 
-        return result;
+        return student;
     }
 
     public void save(Student student) {
@@ -86,6 +86,28 @@ public class StudentDAOImpl implements StudentDAO  {
 
     }
 
+    @Override
+    public boolean authenticateUser(String studentId, String password) {
+
+        boolean result=false;
+
+        String query = "select * from student1.student where Id=? and password=? ";
+
+        ResultSet resultSet = databaseConnection.selectRegisterCourseRSignUpRTime(query, studentId, password);
+        try {
+
+            if (resultSet.next()) {
+                result=true;
+
+            }else {
+                result=false;
+            }
+        }catch (Exception e){
+            e.getStackTrace();
+        }
+
+        return result;
+    }
 
 
 }

@@ -71,11 +71,11 @@ public class ScheduleDAOImpl implements ScheduleDAO {
     }
 
     @Override
-    public boolean deleteSchedule(String id) {
+    public boolean deleteSchedule(String studentId,String courseId) {
 
-         query="delete from student1.schedule where (idSchedule= ?);";
+         query="delete from student1.schedule where idStudent= ? and idCourse=? ;";
 
-         return databaseConnection.delete(query,id);
+         return databaseConnection.deleteSchedule(query,studentId,courseId);
 
 
     }
@@ -140,7 +140,7 @@ public class ScheduleDAOImpl implements ScheduleDAO {
 
         boolean result=false;
 
-         resultSet= databaseConnection.selectRegistration(query,studentId,courseId);
+         resultSet= databaseConnection.selectRegisterCourseRSignUpRTime(query,studentId,courseId);
 
           try {
 

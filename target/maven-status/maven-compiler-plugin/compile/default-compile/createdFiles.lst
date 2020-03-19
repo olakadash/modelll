@@ -1,3 +1,4 @@
+com\ola\registration\model\dao\LoginDAO.class
 com\ola\registration\model\utils\DatabaseConnection.class
 com\ola\registration\model\main.class
 com\ola\registration\model\dao\CourseDAO.class
@@ -11,7 +12,9 @@ com\ola\registration\model\dao\daoimpl\StudentDAOImpl.class
 com\ola\registration\model\entity\CourseBuilder.class
 com\ola\registration\model\dao\ScheduleDAO.class
 com\ola\registration\model\utils\ConnectionWrapper.class
+com\ola\registration\model\entity\Login.class
 com\ola\registration\model\utils\JeaQueue.class
+com\ola\registration\model\dao\daoimpl\LoginDAOImpl.class
 com\ola\registration\model\entity\Schedule.class
 com\ola\registration\model\dao\daoimpl\CourseDAOImpl.class
 com\ola\registration\model\entity\BuildStudentBuilderConstructor.class
