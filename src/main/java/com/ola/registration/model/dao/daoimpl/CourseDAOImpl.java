@@ -5,6 +5,7 @@ import com.ola.registration.model.entity.BuildCourseBuilderConstructor;
 import com.ola.registration.model.utils.DatabaseConnection;
 import com.ola.registration.model.entity.Course;
 import java.sql.ResultSet;
+import java.util.ArrayList;
 import java.util.List;
 
 public class CourseDAOImpl implements CourseDAO  {
@@ -42,8 +43,8 @@ public class CourseDAOImpl implements CourseDAO  {
     }
 
     @Override
-    public String findCourseByName(String courseName)  {
-        String result=" ";
+    public Course findCourseByName(String courseName)  {
+        Course course=null;
 
         try {
         String query = " select * from student1.course where courseName=?";
@@ -51,31 +52,33 @@ public class CourseDAOImpl implements CourseDAO  {
         ResultSet resultSet =  databaseConnection.select(query,courseName);
 
         while (resultSet.next()) {
-            result= resultSet.getString(2);
+            course= BuildCourseBuilderConstructor.buildCourseFromResultSET(resultSet);
         }
         }catch (Exception e){
             System.out.println(e); }
 
-        return result;
+        return course;
     }
 
     @Override
-    public String findCourseByInstructor(String instructor)  {
+    public List<Course> findCourseByInstructor(String instructor)  {
 
-        String result=" ";
+        List<Course> listOfInstructorCode=new ArrayList<>();
+
         try {
         String query = " select * from student1.course where instructor=?";
 
         ResultSet resultSet =  databaseConnection.select(query,instructor);
 
         while (resultSet.next()) {
-             result= resultSet.getString(3) ;
+
+            listOfInstructorCode.add(BuildCourseBuilderConstructor.buildCourseFromResultSET(resultSet));
 
         }
     }catch (Exception e){
         System.out.println(e); }
 
-        return result;
+        return listOfInstructorCode;
     }
 
     @Override
@@ -87,16 +90,33 @@ public class CourseDAOImpl implements CourseDAO  {
     }
 
     @Override
-    public List<Course> list() {
+    public List<Course> listOfCourse() {
 
-        return null;
+        List<Course> listOfCourse=new ArrayList<>();
+
+        String query="select * from student1.course ";
+
+        ResultSet resultSet=databaseConnection.selectColumn(query);
+        try {
+
+
+            while (resultSet.next()) {
+
+                listOfCourse.add(BuildCourseBuilderConstructor.buildCourseFromResultSET(resultSet));
+
+            }
+        }catch (Exception e){
+            e.getStackTrace();
+        }
+
+        return listOfCourse;
     }
 
     @Override
     public void update(Course course)  {
         //ToDO handel update query
 
-        String query = " update  student1.course set courseName=? ,instructor=?, courseCode=?, capacity=?, startingDate=? ,duration =?, hours=? where idcourse=? ;";
+        String query = " update  student1.course set courseName=? ,instructor=?, courseCode=?, capacity=?, startingDate=? ,duration =?, hours=? where idCourse=? ;";
 
         databaseConnection.updateCourse(query,course);
 
@@ -105,7 +125,7 @@ public class CourseDAOImpl implements CourseDAO  {
     @Override
     public boolean deleteCourseById(String id) {
 
-        String query = " delete from student1.course where idcourse=?";
+        String query = " delete from student1.course where idCourse=?";
 
       return  databaseConnection.delete(query , id);
 

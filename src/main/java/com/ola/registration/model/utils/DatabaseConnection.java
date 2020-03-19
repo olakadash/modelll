@@ -2,6 +2,7 @@
 package com.ola.registration.model.utils;
 
 import com.ola.registration.model.entity.Course;
+import com.ola.registration.model.entity.Login;
 import com.ola.registration.model.entity.Schedule;
 import com.ola.registration.model.entity.Student;
 
@@ -224,14 +225,14 @@ import java.sql.ResultSet;
        return resultSet;
      }
 
-     public ResultSet selectRegistration(String query,String studentId, String courseId) {
+     public ResultSet selectRegisterCourseRSignUpRTime(String query,String studentId, String courseIdRpassword) {
 
          try {
 
 
              preparedStatement = getConnection().getConnection().prepareStatement(query);
              preparedStatement.setString(1,studentId);
-             preparedStatement.setString(2,courseId);
+             preparedStatement.setString(2,courseIdRpassword);
              resultSet=preparedStatement.executeQuery();
 
          }catch (Exception e){
@@ -239,6 +240,45 @@ import java.sql.ResultSet;
          }
 
          return resultSet;
+     }
+
+
+     public void insertLogin(String query, Login login) {
+
+       try {
+           preparedStatement=getConnection().getConnection().prepareStatement(query);
+           preparedStatement.setString(1,login.getToken());
+           preparedStatement.setString(2,login.getStudentId());
+           preparedStatement.setString(3,String.valueOf(login.getTime()));
+
+           preparedStatement.executeUpdate();
+
+       }catch (Exception e){
+           e.getStackTrace();
+       }
+     }
+
+
+     public boolean deleteSchedule(String query, String studentId, String courseId) {
+
+         boolean resultDelete=false;
+
+         try {
+
+             preparedStatement= getConnection().getConnection().prepareStatement(query);
+
+             preparedStatement.setString(1, studentId);
+             preparedStatement.setString(2,courseId);
+             preparedStatement.executeUpdate();
+
+             resultDelete=true;
+
+             //release();
+
+         } catch (Exception e) {
+             e.getMessage();}
+
+         return resultDelete;
      }
  }
 

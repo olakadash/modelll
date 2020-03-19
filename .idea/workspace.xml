@@ -2,15 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c983f888-756e-4dc3-af64-041c6bd42e2a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ola/registration/model/dao/LoginDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ola/registration/model/dao/CourseDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ola/registration/model/dao/CourseDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ola/registration/model/dao/ScheduleDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ola/registration/model/dao/ScheduleDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ola/registration/model/dao/StudentDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ola/registration/model/dao/StudentDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ola/registration/model/dao/daoimpl/CourseDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ola/registration/model/dao/daoimpl/CourseDAOImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ola/registration/model/dao/daoimpl/ScheduleDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ola/registration/model/dao/daoimpl/ScheduleDAOImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ola/registration/model/dao/daoimpl/StudentDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ola/registration/model/dao/daoimpl/StudentDAOImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ola/registration/model/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ola/registration/model/main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ola/registration/model/utils/DatabaseConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ola/registration/model/utils/DatabaseConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ola/registration/model/dao/CourseDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ola/registration/model/dao/CourseDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ola/registration/model/dao/ScheduleDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ola/registration/model/dao/ScheduleDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ola/registration/model/dao/StudentDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ola/registration/model/dao/StudentDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ola/registration/model/dao/daoimpl/CourseDAOImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ola/registration/model/dao/daoimpl/CourseDAOImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/ola/registration/model/dao/daoimpl/ScheduleDAOImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ola/registration/model/dao/daoimpl/ScheduleDAOImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ola/registration/model/dao/daoimpl/StudentDAOImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ola/registration/model/dao/daoimpl/StudentDAOImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/ola/registration/model/main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ola/registration/model/main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/ola/registration/model/utils/DatabaseConnection.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ola/registration/model/utils/DatabaseConnection.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/model-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/model-1.0-SNAPSHOT.jar" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -43,8 +55,101 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/ola/registration/model/main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="127">
-              <caret line="65" column="36" selection-start-line="65" selection-start-column="36" selection-end-line="65" selection-end-column="36" />
+            <state relative-caret-position="-446">
+              <caret line="69" column="53" selection-start-line="69" selection-start-column="53" selection-end-line="69" selection-end-column="53" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/ola/registration/model/dao/CourseDAO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="8" column="25" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/ola/registration/model/dao/StudentDAO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="9" column="30" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/ola/registration/model/dao/daoimpl/CourseDAOImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="179">
+              <caret line="116" column="10" selection-start-line="116" selection-start-column="10" selection-end-line="116" selection-end-column="10" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/ola/registration/model/dao/ScheduleDAO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="13" column="40" selection-start-line="13" selection-start-column="40" selection-end-line="13" selection-end-column="40" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/ola/registration/model/dao/daoimpl/ScheduleDAOImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="288">
+              <caret line="77" column="49" selection-start-line="77" selection-start-column="49" selection-end-line="77" selection-end-column="49" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/ola/registration/model/utils/DatabaseConnection.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="373">
+              <caret line="271" column="47" selection-start-line="271" selection-start-column="47" selection-end-line="271" selection-end-column="47" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/ola/registration/model/dao/daoimpl/LoginDAOImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="389">
+              <caret line="48" column="5" selection-start-line="48" selection-start-column="5" selection-end-line="48" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/ola/registration/model/dao/daoimpl/StudentDAOImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="89" column="19" selection-start-line="89" selection-start-column="19" selection-end-line="89" selection-end-column="35" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -86,18 +191,22 @@
         <option value="$PROJECT_DIR$/src/main/java/com/ola/registration/model/dao/SchedualDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ola/registration/model/dao/SchedaulDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ola/registration/model/dao/SchedulDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ola/registration/model/dao/StudentDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ola/registration/model/dao/CourseDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ola/registration/model/entity/Schedule.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ola/registration/model/entity/CourseBuilder.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ola/registration/model/entity/BuildCourseBuilderConstructor.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ola/registration/model/entity/Course.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ola/registration/model/dao/ScheduleDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ola/registration/model/main.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ola/registration/model/utils/DatabaseConnection.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ola/registration/model/dao/daoimpl/ScheduleDAOImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ola/registration/model/dao/daoimpl/LoginDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ola/registration/model/entity/Login.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ola/registration/model/dao/daoimpl/CourseDAOImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ola/registration/model/dao/CourseDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ola/registration/model/dao/LoginDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ola/registration/model/dao/daoimpl/LoginDAOImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ola/registration/model/dao/daoimpl/StudentDAOImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ola/registration/model/dao/StudentDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ola/registration/model/dao/ScheduleDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ola/registration/model/dao/daoimpl/ScheduleDAOImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ola/registration/model/utils/DatabaseConnection.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ola/registration/model/main.java" />
       </list>
     </option>
   </component>
@@ -136,6 +245,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -226,21 +337,43 @@
             </path>
             <path>
               <item name="model" type="b2602c69:ProjectViewProjectNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="ola" type="462c0819:PsiDirectoryNode" />
+              <item name="registration" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+              <item name="entity" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="model" type="b2602c69:ProjectViewProjectNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="ola" type="462c0819:PsiDirectoryNode" />
+              <item name="registration" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="model" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../controller" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -315,12 +448,15 @@
       <workItem from="1583865769022" duration="416000" />
       <workItem from="1583868906015" duration="18694000" />
       <workItem from="1583889466503" duration="3508000" />
-      <workItem from="1584132260992" duration="5648000" />
+      <workItem from="1584132260992" duration="6104000" />
+      <workItem from="1584142038158" duration="3804000" />
+      <workItem from="1584275620390" duration="17214000" />
+      <workItem from="1584479208607" duration="10487000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="112438000" />
+    <option name="totallyTimeSpent" value="144538000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -332,10 +468,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1382" height="784" extended-state="7" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25869894" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20196672" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="DB Browser" order="3" />
@@ -345,18 +480,18 @@
       <window_info id="Image Layers" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49848714" visible="true" weight="0.2315951" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49848714" visible="true" weight="0.34969324" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.41871166" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.08895706" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.04601227" />
       <window_info anchor="bottom" id="DB Execution Console" order="7" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5015129" side_tool="true" weight="0.45552146" />
       <window_info anchor="bottom" id="Database Changes" order="10" />
-      <window_info anchor="bottom" id="Version Control" order="11" weight="0.08895706" />
+      <window_info anchor="bottom" id="Version Control" order="11" weight="0.2714724" />
       <window_info anchor="bottom" id="Docker" order="12" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Messages" order="13" sideWeight="0.49924356" weight="0.22546013" />
+      <window_info anchor="bottom" id="Messages" order="13" sideWeight="0.49924356" weight="0.21779141" />
       <window_info anchor="right" id="Maven" order="0" weight="0.26626325" />
       <window_info anchor="right" id="Palette" order="1" />
       <window_info anchor="right" id="Capture Analysis" order="2" />
@@ -451,6 +586,16 @@
     </ignored-roots>
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/ola/registration/model/dao/daoimpl/ScheduleDAOImpl.java</url>
+          <line>98</line>
+          <properties />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
         <watch expression="query" />
@@ -462,13 +607,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ola/registration/model/dao/utils/pool.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/SDO/com/ola/registration/model/main.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/SDO/com/ola/registration/model/entity/Student.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/SDO/com/ola/registration/model/dao/utils/ConnectionWrapper.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/SDO/com/ola/registration/model/dao/utils/DatabaseConnection.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/SDO/com/ola/registration/model/dao/utils/JeaQueue.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/SDO/com/ola/registration/model/dao/StudentDAO.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/ola/registration/controller/RegisterController.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/ola/registration/controller/ScheduleController.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/ola/registration/controller/LogoutController.java" />
@@ -612,13 +750,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="6" selection-start-line="6" selection-end-line="8" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/ola/registration/model/utils/JeaQueue.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
@@ -626,20 +757,432 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ola/registration/model/utils/ConnectionWrapper.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ola/registration/model/entity/StudentBuilder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ola/registration/model/entity/Course.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="31" lean-forward="true" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
+          <folding>
+            <element signature="e#481#482#0" expanded="true" />
+            <element signature="e#529#530#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JavaScript-modules-diagram/C:/Users/Mohannad Aabed/IdeaProjects/model/.idea">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JavaScript-modules-diagram</ID>
+          <OriginalElement>$PROJECT_DIR$/.idea</OriginalElement>
+          <nodes />
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="523.0" y="243.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category>All</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>Details</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://MODULES/mdl-model">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>MODULES</ID>
+          <OriginalElement>mdl-model</OriginalElement>
+          <nodes>
+            <node x="" y="">mdl-model</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="53.0" y="10.0" />
+          <SelectedNodes />
+          <Categories />
+          <SCOPE>All</SCOPE>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JavaScript-modules-diagram/C:/Users/Mohannad Aabed/IdeaProjects/model">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JavaScript-modules-diagram</ID>
+          <OriginalElement>$PROJECT_DIR$</OriginalElement>
+          <nodes />
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="523.0" y="243.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category>All</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>Details</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JavaScript-modules-diagram/C:/Users/Mohannad Aabed/IdeaProjects/model/src/main/java">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JavaScript-modules-diagram</ID>
+          <OriginalElement>$PROJECT_DIR$/src/main/java</OriginalElement>
+          <nodes />
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="523.0" y="243.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category>All</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>Details</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement />
+          <nodes>
+            <node x="" y="">com</node>
+            <node x="" y="">netscape</node>
+            <node x="" y="">oracle</node>
+            <node x="" y="">org</node>
+            <node x="" y="">sun</node>
+            <node x="" y="">META-INF</node>
+            <node x="" y="">jdk</node>
+            <node x="" y="">groovyjarjarasm</node>
+            <node x="" y="">java</node>
+            <node x="" y="">groovy</node>
+            <node x="" y="">javax</node>
+            <node x="" y="">groovyjarjarcommonscli</node>
+            <node x="" y="">javafx</node>
+            <node x="" y="">groovyjarjarantlr</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="-53.0" y="157.0" />
+          <SelectedNodes />
+          <Categories />
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/com">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>com</OriginalElement>
+          <nodes>
+            <node x="" y="">com.oracle</node>
+            <node x="" y="">com.sun</node>
+            <node x="" y="">com.mysql</node>
+            <node x="" y="">com.ola</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="128.0" y="86.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Fields</Category>
+            <Category>Constructors</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/com.ola.registration.model">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>com.ola.registration.model</OriginalElement>
+          <nodes>
+            <node x="" y="">com.ola.registration.model.entity</node>
+            <node x="" y="">com.ola.registration.model.main</node>
+            <node x="" y="">com.ola.registration.model.dao</node>
+            <node x="" y="">com.ola.registration.model.utils</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="111.0" y="86.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Constructors</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/com.ola.registration.model.dao.CourseDAO">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>com.ola.registration.model.dao.CourseDAO</OriginalElement>
+          <nodes />
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="54.0" y="14.0" />
+          <SelectedNodes />
+          <Categories />
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JavaScript-modules-diagram/C:/Users/Mohannad Aabed/IdeaProjects/model/src/main/java/com/ola/registration/model/dao/daoimpl">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JavaScript-modules-diagram</ID>
+          <OriginalElement>$PROJECT_DIR$/src/main/java/com/ola/registration/model/dao/daoimpl</OriginalElement>
+          <nodes />
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="528.0" y="277.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category>All</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>Details</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/com.ola.registration.model.dao.daoimpl">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>com.ola.registration.model.dao.daoimpl</OriginalElement>
+          <nodes>
+            <node x="143.17485119047637" y="196.0">com.ola.registration.model.entity.BuildStudentBuilderConstructor</node>
+            <node x="207.26785714285745" y="0.0">com.ola.registration.model.entity.Student</node>
+            <node x="0.0" y="283.0">com.ola.registration.model.dao.daoimpl.StudentDAOImpl</node>
+            <node x="418.1748511904764" y="196.0">com.ola.registration.model.dao.ScheduleDAO</node>
+            <node x="475.184523809524" y="97.0">com.ola.registration.model.entity.Schedule</node>
+            <node x="154.6763392857145" y="97.0">com.ola.registration.model.entity.StudentBuilder</node>
+            <node x="706.0595238095241" y="196.0">com.ola.registration.model.entity.BuildCourseBuilderConstructor</node>
+            <node x="732.6250000000002" y="97.0">com.ola.registration.model.entity.CourseBuilder</node>
+            <node x="770.0595238095241" y="0.0">com.ola.registration.model.entity.Course</node>
+            <node x="4.4248511904763745" y="108.0">com.ola.registration.model.dao.StudentDAO</node>
+            <node x="910.0595238095241" y="108.0">com.ola.registration.model.dao.CourseDAO</node>
+            <node x="429.12500000000017" y="283.0">com.ola.registration.model.dao.daoimpl.ScheduleDAOImpl</node>
+            <node x="841.3430059523812" y="283.0">com.ola.registration.model.dao.daoimpl.CourseDAOImpl</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="com.ola.registration.model.dao.ScheduleDAO" target="com.ola.registration.model.entity.Student">
+              <point x="-40.33333333333337" y="-13.5" />
+              <point x="438.341517857143" y="171.0" />
+              <point x="446.97916666666686" y="171.0" />
+              <point x="446.97916666666686" y="47.0" />
+              <point x="294.45535714285745" y="47.0" />
+              <point x="40.6875" y="13.5" />
+            </edge>
+            <edge source="com.ola.registration.model.dao.daoimpl.ScheduleDAOImpl" target="com.ola.registration.model.entity.Student">
+              <point x="-64.0" y="-24.5" />
+              <point x="493.12500000000017" y="253.0" />
+              <point x="407.6748511904764" y="253.0" />
+              <point x="407.6748511904764" y="57.0" />
+              <point x="282.83035714285745" y="57.0" />
+              <point x="29.0625" y="13.5" />
+            </edge>
+            <edge source="com.ola.registration.model.dao.StudentDAO" target="com.ola.registration.model.entity.Student">
+              <point x="0.0" y="-13.5" />
+              <point x="61.424851190476375" y="47.0" />
+              <point x="213.08035714285745" y="47.0" />
+              <point x="-40.6875" y="13.5" />
+            </edge>
+            <edge source="com.ola.registration.model.dao.CourseDAO" target="com.ola.registration.model.entity.Course">
+              <point x="0.0" y="-13.5" />
+              <point x="963.5595238095241" y="57.0" />
+              <point x="839.9345238095241" y="57.0" />
+              <point x="26.875" y="13.5" />
+            </edge>
+            <edge source="com.ola.registration.model.dao.daoimpl.ScheduleDAOImpl" target="com.ola.registration.model.entity.BuildStudentBuilderConstructor">
+              <point x="-106.66666666666663" y="-24.5" />
+              <point x="450.45833333333354" y="263.0" />
+              <point x="333.6748511904764" y="263.0" />
+              <point x="63.5" y="13.5" />
+            </edge>
+            <edge source="com.ola.registration.model.dao.daoimpl.ScheduleDAOImpl" target="com.ola.registration.model.entity.BuildCourseBuilderConstructor">
+              <point x="106.66666666666663" y="-24.5" />
+              <point x="663.7916666666667" y="263.0" />
+              <point x="767.8095238095241" y="263.0" />
+              <point x="-61.75" y="13.5" />
+            </edge>
+            <edge source="com.ola.registration.model.entity.BuildCourseBuilderConstructor" target="com.ola.registration.model.entity.Course">
+              <point x="61.75" y="-13.5" />
+              <point x="891.3095238095241" y="171.0" />
+              <point x="878.1250000000002" y="171.0" />
+              <point x="878.1250000000002" y="67.0" />
+              <point x="829.1845238095241" y="67.0" />
+              <point x="16.125" y="13.5" />
+            </edge>
+            <edge source="com.ola.registration.model.dao.daoimpl.ScheduleDAOImpl" target="com.ola.registration.model.dao.ScheduleDAO">
+              <point x="-21.33333333333337" y="-24.5" />
+              <point x="535.7916666666667" y="243.0" />
+              <point x="478.6748511904764" y="243.0" />
+              <point x="0.0" y="13.5" />
+            </edge>
+            <edge source="com.ola.registration.model.dao.daoimpl.ScheduleDAOImpl" target="com.ola.registration.model.entity.Course">
+              <point x="64.0" y="-24.5" />
+              <point x="621.1250000000002" y="253.0" />
+              <point x="692.6845238095241" y="253.0" />
+              <point x="692.6845238095241" y="57.0" />
+              <point x="786.1845238095241" y="57.0" />
+              <point x="-26.875" y="13.5" />
+            </edge>
+            <edge source="com.ola.registration.model.dao.daoimpl.StudentDAOImpl" target="com.ola.registration.model.entity.BuildStudentBuilderConstructor">
+              <point x="83.00000000000011" y="-24.5" />
+              <point x="-63.5" y="13.5" />
+            </edge>
+            <edge source="com.ola.registration.model.entity.BuildStudentBuilderConstructor" target="com.ola.registration.model.entity.Student">
+              <point x="63.5" y="-13.5" />
+              <point x="333.6748511904764" y="171.0" />
+              <point x="307.1763392857145" y="171.0" />
+              <point x="307.1763392857145" y="67.0" />
+              <point x="271.20535714285745" y="67.0" />
+              <point x="17.4375" y="13.5" />
+            </edge>
+            <edge source="com.ola.registration.model.dao.daoimpl.StudentDAOImpl" target="com.ola.registration.model.entity.Student">
+              <point x="1.1368683772161603E-13" y="-24.5" />
+              <point x="124.50000000000011" y="263.0" />
+              <point x="128.92485119047637" y="263.0" />
+              <point x="128.92485119047637" y="57.0" />
+              <point x="224.70535714285745" y="57.0" />
+              <point x="-29.0625" y="13.5" />
+            </edge>
+            <edge source="com.ola.registration.model.dao.daoimpl.CourseDAOImpl" target="com.ola.registration.model.entity.BuildCourseBuilderConstructor">
+              <point x="-81.66666666666669" y="-24.5" />
+              <point x="882.1763392857144" y="263.0" />
+              <point x="891.3095238095241" y="263.0" />
+              <point x="61.75" y="13.5" />
+            </edge>
+            <edge source="com.ola.registration.model.dao.ScheduleDAO" target="com.ola.registration.model.entity.Schedule">
+              <point x="40.333333333333314" y="-13.5" />
+              <point x="519.0081845238096" y="171.0" />
+              <point x="526.9345238095241" y="171.0" />
+              <point x="-51.75" y="24.5" />
+            </edge>
+            <edge source="com.ola.registration.model.dao.daoimpl.ScheduleDAOImpl" target="com.ola.registration.model.entity.Schedule">
+              <point x="21.33333333333337" y="-24.5" />
+              <point x="578.4583333333335" y="243.0" />
+              <point x="630.4345238095241" y="243.0" />
+              <point x="51.75" y="24.5" />
+            </edge>
+            <edge source="com.ola.registration.model.entity.BuildStudentBuilderConstructor" target="com.ola.registration.model.entity.StudentBuilder">
+              <point x="-63.5" y="-13.5" />
+              <point x="206.67485119047637" y="171.0" />
+              <point x="225.6763392857145" y="171.0" />
+              <point x="0.0" y="24.5" />
+            </edge>
+            <edge source="com.ola.registration.model.entity.BuildCourseBuilderConstructor" target="com.ola.registration.model.entity.CourseBuilder">
+              <point x="-61.75" y="-13.5" />
+              <point x="767.8095238095241" y="171.0" />
+              <point x="800.1250000000002" y="171.0" />
+              <point x="0.0" y="24.5" />
+            </edge>
+            <edge source="com.ola.registration.model.dao.ScheduleDAO" target="com.ola.registration.model.entity.Course">
+              <point x="0.0" y="-13.5" />
+              <point x="478.6748511904764" y="171.0" />
+              <point x="464.684523809524" y="171.0" />
+              <point x="464.684523809524" y="47.0" />
+              <point x="775.4345238095241" y="47.0" />
+              <point x="-37.625" y="13.5" />
+            </edge>
+            <edge source="com.ola.registration.model.dao.daoimpl.CourseDAOImpl" target="com.ola.registration.model.entity.Course">
+              <point x="81.66666666666669" y="-24.5" />
+              <point x="1045.509672619048" y="263.0" />
+              <point x="1027.559523809524" y="263.0" />
+              <point x="1027.559523809524" y="47.0" />
+              <point x="850.6845238095241" y="47.0" />
+              <point x="37.625" y="13.5" />
+            </edge>
+            <edge source="com.ola.registration.model.entity.StudentBuilder" target="com.ola.registration.model.entity.Student">
+              <point x="0.0" y="-24.5" />
+              <point x="225.6763392857145" y="77.0" />
+              <point x="247.95535714285745" y="77.0" />
+              <point x="-5.8125" y="13.5" />
+            </edge>
+            <edge source="com.ola.registration.model.entity.CourseBuilder" target="com.ola.registration.model.entity.Course">
+              <point x="-45.0" y="-24.5" />
+              <point x="755.1250000000002" y="67.0" />
+              <point x="796.9345238095241" y="67.0" />
+              <point x="-16.125" y="13.5" />
+            </edge>
+            <edge source="com.ola.registration.model.dao.daoimpl.StudentDAOImpl" target="com.ola.registration.model.dao.StudentDAO">
+              <point x="-82.99999999999989" y="-24.5" />
+              <point x="41.500000000000114" y="263.0" />
+              <point x="61.424851190476375" y="263.0" />
+              <point x="0.0" y="13.5" />
+            </edge>
+            <edge source="com.ola.registration.model.dao.daoimpl.CourseDAOImpl" target="com.ola.registration.model.dao.CourseDAO">
+              <point x="0.0" y="-24.5" />
+              <point x="0.0" y="13.5" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="1.0" x="517.0" y="162.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Constructors</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ola/registration/model/entity/CourseBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-328">
+          <caret line="8" column="28" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ola/registration/model/entity/BuildStudentBuilderConstructor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ola/registration/model/entity/BuildCourseBuilderConstructor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ola/registration/model/entity/StudentBuilder.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ola/registration/model/entity/Schedule.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        <state relative-caret-position="204">
+          <caret line="12" column="33" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="10" lean-forward="true" selection-start-line="23" selection-start-column="10" selection-end-line="23" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ola/registration/model/entity/Login.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="24" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
         </state>
       </provider>
     </entry>
@@ -656,97 +1199,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ola/registration/model/dao/StudentDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ola/registration/model/dao/CourseDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="18" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ola/registration/model/entity/BuildCourseBuilderConstructor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="23" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ola/registration/model/utils/DatabaseConnection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="29" column="36" selection-start-line="29" selection-start-column="36" selection-end-line="29" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ola/registration/model/entity/BuildStudentBuilderConstructor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ola/registration/model/entity/Schedule.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="33" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ola/registration/model/entity/Course.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="31" lean-forward="true" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
-          <folding>
-            <element signature="e#481#482#0" expanded="true" />
-            <element signature="e#529#530#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ola/registration/model/entity/CourseBuilder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="28" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ola/registration/model/dao/ScheduleDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="30" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="62" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ola/registration/model/dao/daoimpl/ScheduleDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="56">
-          <caret line="12" column="4" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#scheduleIdCreator#0;class#ScheduleDAOImpl#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/ola/registration/model/dao/daoimpl/CourseDAOImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="50" lean-forward="true" selection-start-line="11" selection-start-column="50" selection-end-line="11" selection-end-column="50" />
+        <state relative-caret-position="179">
+          <caret line="116" column="10" selection-start-line="116" selection-start-column="10" selection-end-line="116" selection-end-column="10" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -756,7 +1212,84 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/ola/registration/model/dao/daoimpl/StudentDAOImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+          <caret line="89" column="19" selection-start-line="89" selection-start-column="19" selection-end-line="89" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ola/registration/model/utils/ConnectionWrapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ola/registration/model/dao/LoginDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ola/registration/model/dao/daoimpl/LoginDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="389">
+          <caret line="48" column="5" selection-start-line="48" selection-start-column="5" selection-end-line="48" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ola/registration/model/utils/DatabaseConnection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="373">
+          <caret line="271" column="47" selection-start-line="271" selection-start-column="47" selection-end-line="271" selection-end-column="47" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ola/registration/model/dao/daoimpl/ScheduleDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="77" column="49" selection-start-line="77" selection-start-column="49" selection-end-line="77" selection-end-column="49" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ola/registration/model/dao/CourseDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="8" column="25" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ola/registration/model/dao/StudentDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="30" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ola/registration/model/dao/ScheduleDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="40" selection-start-line="13" selection-start-column="40" selection-end-line="13" selection-end-column="40" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -765,8 +1298,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/ola/registration/model/main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
-          <caret line="65" column="36" selection-start-line="65" selection-start-column="36" selection-end-line="65" selection-end-column="36" />
+        <state relative-caret-position="-446">
+          <caret line="69" column="53" selection-start-line="69" selection-start-column="53" selection-end-line="69" selection-end-column="53" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
