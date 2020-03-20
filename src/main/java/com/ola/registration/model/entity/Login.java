@@ -1,5 +1,6 @@
 package com.ola.registration.model.entity;
 
+import java.sql.Date;
 import java.time.LocalDateTime;
 
 public class Login {
@@ -36,5 +37,14 @@ public class Login {
 
     public LocalDateTime getTime() {
         return time;
+    }
+
+    @Override
+    public String toString() {
+        return "Login{" +
+                "studentId='" + studentId + '\'' +
+                ", token='" + token + '\'' +
+                ", time=" + time +
+                '}';
     }
 }

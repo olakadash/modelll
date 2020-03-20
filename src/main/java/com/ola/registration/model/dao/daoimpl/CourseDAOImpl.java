@@ -125,7 +125,7 @@ public class CourseDAOImpl implements CourseDAO  {
     @Override
     public boolean deleteCourseById(String id) {
 
-        String query = " delete from student1.course where idCourse=?";
+        String query = " delete from student1.course where courseId=?";
 
       return  databaseConnection.delete(query , id);
 

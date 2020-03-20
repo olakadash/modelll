@@ -4,8 +4,11 @@ import com.ola.registration.model.dao.LoginDAO;
 import com.ola.registration.model.entity.Login;
 import com.ola.registration.model.utils.DatabaseConnection;
 
+import java.sql.Date;
 import java.sql.ResultSet;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
 
 public class LoginDAOImpl implements LoginDAO {
 
@@ -81,5 +84,29 @@ public class LoginDAOImpl implements LoginDAO {
         }
 
         return result;
+    }
+
+    @Override
+    public List<Login> showLogin() {
+
+        String query="select * from student1.login ";
+
+        ResultSet resultSet=databaseConnection.selectColumn(query);
+
+        List<Login> login=new ArrayList<>();
+
+        try {
+
+            while (resultSet.next()){
+
+                login.add(new Login(resultSet.getString(1),resultSet.getString(2),
+                       LocalDateTime.parse(resultSet.getString(3))));
+
+            }
+        }catch (Exception e){
+            e.getStackTrace();
+        }
+
+        return login;
     }
 }

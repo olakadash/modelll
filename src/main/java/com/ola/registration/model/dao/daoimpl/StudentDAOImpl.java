@@ -61,7 +61,7 @@ public class StudentDAOImpl implements StudentDAO  {
 
     public void save(Student student) {
 
-        String query = " insert into student1.student  values(?,?,?,?,?,?)";
+        String query = " insert into student1.student  values(?,?,?,?,?,?,?)";
         databaseConnection.insertStudent(query,student);
 
     }
@@ -69,7 +69,7 @@ public class StudentDAOImpl implements StudentDAO  {
     public void update(Student student)  {
 
         //ToDO handel update query
-        String query = " update  student1.student set firstName=? ,lastName=? , email=? ,password=?,joinYear=? where id=? ;";
+        String query = " update  student1.student set firstName=? ,lastName=? , email=? ,password=?,joinYear=? userType=? where id=? ;";
 
         databaseConnection.updateStudent(query,student);
 

@@ -44,6 +44,12 @@ public class StudentBuilder {
         return this;
     }
 
+    public StudentBuilder setUserTypeBuilder(String userType){
+
+            student.setUserType(userType);
+
+            return this;
+    }
     public Student build(){
 
         return student;

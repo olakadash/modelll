@@ -8,6 +8,7 @@ public class Student {
     private String email;
     private String password;
     private String joinYear;
+    private String userType;
 
 
     public String getId() {
@@ -58,6 +59,14 @@ public class Student {
         this.joinYear = joinYear;
     }
 
+    public void setUserType(String userType) {
+        this.userType = userType;
+    }
+
+    public String getUserType() {
+        return userType;
+    }
+
     @Override
     public String toString() {
         return "Student{" +
@@ -67,6 +76,7 @@ public class Student {
                 ", email='" + email + '\'' +
                 ", password='" + password + '\'' +
                 ", joinYear='" + joinYear + '\'' +
+                ", userType='" + userType + '\'' +
                 '}';
     }
 }
