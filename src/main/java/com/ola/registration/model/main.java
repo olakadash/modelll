@@ -77,12 +77,18 @@
                 LoginDAO loginDAO=new LoginDAOImpl("jdbc:mysql://localhost:3306/student1?useSSL=false"
                         , "root", "root@JEA");
 
-                System.out.println(loginDAO.isLogged("6"));
+                //System.out.println(loginDAO.isLogged("6"));
                // loginDAO.save(new Login("2","1236", LocalDateTime.now()));
 
                // System.out.println( loginDAO.isAlive("1236","1"));
 
                // System.out.println(loginDAO.deleteLogged("2"));
+               List<Login> list= loginDAO.showLogin();
+
+               for (Login login: list){
+
+                   System.out.println(login.toString());
+               }
 
             }catch (Exception e){
                 e.getStackTrace(); }
@@ -102,9 +108,9 @@
 //     }
 
      public static Student student(String id , String firstName, String lastName, String email, String password,
-                             String joinYear){
+                             String joinYear,String userType){
 
-         return   BuildStudentBuilderConstructor.buildStudentFromUserInput(id,firstName,lastName,email,password,joinYear);
+         return   BuildStudentBuilderConstructor.buildStudentFromUserInput(id,firstName,lastName,email,password,joinYear,userType);
      }
 //if admin enter new course
      public static Course course(String id , String courseName, String instructor, String courseCode,

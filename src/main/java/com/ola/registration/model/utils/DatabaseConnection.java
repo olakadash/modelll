@@ -95,6 +95,7 @@ import java.sql.ResultSet;
                  preparedStatement.setString(4,student.getEmail());
                  preparedStatement.setString(5,student.getPassword());
                  preparedStatement.setString(6,student.getJoinYear());
+                 preparedStatement.setString(7,student.getUserType());
 
              preparedStatement.executeUpdate();
         //release();
@@ -116,6 +117,7 @@ import java.sql.ResultSet;
                 preparedStatement.setString(4,student.getPassword());
                 preparedStatement.setString(5,student.getJoinYear());
                 preparedStatement.setString(6,student.getId());
+                preparedStatement.setString(7,student.getUserType());
 
               preparedStatement.executeUpdate();
 
